@@ -105,7 +105,33 @@ public class Main {
         byte daysForWeightLossByMax = (byte) (necessaryWeightLossInKilograms / maxWeightLossInKilogramsPerDay);
         byte averageDaysWeightLoss = (byte) ((daysForWeightLossByMin + daysForWeightLossByMax) / 2);
 
-        System.out.println("\n" + "В среднем, чтобы добиться результата похудения, спортсмену потребуется " + averageDaysWeightLoss + " день.");
+        System.out.println("\n" + "В среднем, чтобы добиться результата похудения, спортсмену потребуется " + averageDaysWeightLoss + " день." + "\n");
 
+        byte monthInYear = 12;
+        byte percentageBonus = 10;
+        int salaryMashaPerMonth = 67_760;
+        int salaryDenisPerMonth = 83_690;
+        int salaryKristinaPerMonth = 76_230;
+
+        int salaryMashaAfterIncreasePerMonth = salaryMashaPerMonth + ((salaryMashaPerMonth * percentageBonus) / 100);
+        int salaryDenisAfterIncreasePerMonth = salaryDenisPerMonth + ((salaryDenisPerMonth * percentageBonus) / 100);
+        int salaryKristinaAfterIncreasePerMonth = salaryKristinaPerMonth + ((salaryKristinaPerMonth * percentageBonus) / 100);
+
+        int salaryMashaBeforeIncreasePerYear = monthInYear * salaryMashaPerMonth;
+        int salaryDenisBeforeIncreasePerYear = monthInYear * salaryDenisPerMonth;
+        int salaryKristinaBeforeIncreasePerYear = monthInYear * salaryKristinaPerMonth;
+
+        int salaryMashaAfterIncreasePerYear = monthInYear * salaryMashaAfterIncreasePerMonth;
+        int salaryDenisAfterIncreasePerYear = monthInYear * salaryDenisAfterIncreasePerMonth;
+        int salaryKristinaAfterIncreasePerYear = monthInYear * salaryKristinaAfterIncreasePerMonth;
+
+        int salaryDifferenceMasha = salaryMashaAfterIncreasePerYear - salaryMashaBeforeIncreasePerYear;
+        int salaryDifferenceDenis = salaryDenisAfterIncreasePerYear - salaryDenisBeforeIncreasePerYear;
+        int salaryDifferenceKristina = salaryKristinaAfterIncreasePerYear - salaryKristinaBeforeIncreasePerYear;
+
+
+        System.out.println("Маша теперь получает " + salaryMashaAfterIncreasePerMonth + " рублей. Годовой доход вырос на " + salaryDifferenceMasha + " рублей.");
+        System.out.println("Денис теперь получает " + salaryDenisAfterIncreasePerMonth + " рублей. Годовой доход вырос на " + salaryDifferenceDenis + " рублей.");
+        System.out.println("Кристина теперь получает " + salaryKristinaAfterIncreasePerMonth + " рублей. Годовой доход вырос на " + salaryDifferenceKristina + " рублей.");
     }
 }
