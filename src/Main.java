@@ -96,5 +96,16 @@ public class Main {
 
         System.out.println("Вес завтрака в граммах: " + breakfastWeightInGrams + " грамм");
         System.out.println("Вес завтрака в килограммах: " + breakfastWeightInKilograms + " килограмм");
+
+        byte necessaryWeightLossInKilograms = 7;
+        float minWeightLossInKilogramsPerDay = 250f / 1000f;
+        float maxWeightLossInKilogramsPerDay = 500f / 1000f;
+
+        byte daysForWeightLossByMin = (byte) (necessaryWeightLossInKilograms / minWeightLossInKilogramsPerDay);
+        byte daysForWeightLossByMax = (byte) (necessaryWeightLossInKilograms / maxWeightLossInKilogramsPerDay);
+        byte averageDaysWeightLoss = (byte) ((daysForWeightLossByMin + daysForWeightLossByMax) / 2);
+
+        System.out.println("\n" + "В среднем, чтобы добиться результата похудения, спортсмену потребуется " + averageDaysWeightLoss + " день.");
+
     }
 }
