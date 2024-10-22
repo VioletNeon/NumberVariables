@@ -79,6 +79,22 @@ public class Main {
         byte allCansOfWhitePaint = (byte) (classrooms * cansOfWhitePaintForOneClassroom);
         byte allCansOfBrownPaint = (byte) (classrooms * cansOfBrownPaintForOneClassroom);
 
-        System.out.println("\n" + "В школе, где " + classrooms + " классов, нужно " + allCansOfWhitePaint + " банок белой краски и " + allCansOfBrownPaint + " банок коричневой краски.");
+        System.out.println("\n" + "В школе, где " + classrooms + " классов, нужно " + allCansOfWhitePaint + " банок белой краски и " + allCansOfBrownPaint + " банок коричневой краски." + "\n");
+
+        byte bananas = 5;
+        short milkOneHundredMlBottle = 2;
+        byte iceCream = 2;
+        byte eggs = 4;
+
+        byte bananaWeightInGrams = 80;
+        byte milkWeightInGramsByOneBottle = 105;
+        byte iceCreamWeightInGrams = 100;
+        byte eggWeightInGrams = 70;
+
+        short breakfastWeightInGrams = (short) ((bananas * bananaWeightInGrams) + (milkOneHundredMlBottle * milkWeightInGramsByOneBottle) + (iceCream * iceCreamWeightInGrams) + (eggs * eggWeightInGrams));
+        float breakfastWeightInKilograms = (float) (breakfastWeightInGrams / 1000);
+
+        System.out.println("Вес завтрака в граммах: " + breakfastWeightInGrams + " грамм");
+        System.out.println("Вес завтрака в килограммах: " + breakfastWeightInKilograms + " килограмм");
     }
 }
