@@ -26,7 +26,7 @@ public class Main {
         short employees = 27_897;
         byte mathTeachers = 67;
 
-        System.out.println("Инициализированы переменные со значениями и типами:\n" +
+        System.out.println("\n" + "Инициализированы переменные со значениями и типами:" + "\n" +
                 "degrees с типом float равно " + degrees + ";\n" +
                 "grainsOfSand с типом long равно " + grainsOfSand + ";\n" +
                 "depthLevel с типом float равно " + depthLevel + ";\n" +
@@ -35,5 +35,21 @@ public class Main {
                 "employees с типом short равно " + employees + ";\n" +
                 "mathTeachers с типом byte равно " + mathTeachers + ";"
         );
+
+        byte firstClassPupilsCount = 23;
+        byte secondClassPupilsCount = 27;
+        byte thirdClassPupilsCount = 30;
+        short sheetsPurchased = 480;
+        byte allPupils = (byte) (firstClassPupilsCount + secondClassPupilsCount + thirdClassPupilsCount);
+        short sheetsForOnePupil = (short) (sheetsPurchased / allPupils);
+
+        System.out.println("\n" + "Учеников в классах:" + "\n" +
+                "У Людмилы Павловны " + firstClassPupilsCount + " ученика;" + "\n" +
+                "У Анны Сергеевны " + secondClassPupilsCount + " учеников;" + "\n" +
+                "У Екатерины Андреевны " + thirdClassPupilsCount + " учеников;" + "\n\n" +
+                "Всего куплено листов бумаги " + sheetsPurchased + ";" + "\n" +
+                "На каждого ученика рассчитано " + sheetsForOnePupil + " листов бумаги."
+        );
+
     }
 }
