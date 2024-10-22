@@ -48,8 +48,26 @@ public class Main {
                 "У Анны Сергеевны " + secondClassPupilsCount + " учеников;" + "\n" +
                 "У Екатерины Андреевны " + thirdClassPupilsCount + " учеников;" + "\n\n" +
                 "Всего куплено листов бумаги " + sheetsPurchased + ";" + "\n" +
-                "На каждого ученика рассчитано " + sheetsForOnePupil + " листов бумаги."
+                "На каждого ученика рассчитано " + sheetsForOnePupil + " листов бумаги." + "\n"
         );
 
+        byte productivityPerMinute = 16 / 2;
+        byte twentyMinutes = 20;
+        byte dayHours = 24;
+        byte minutesInHour = 60;
+
+        short minutesInDay = (short) (dayHours * minutesInHour);
+        short minutesInThreeDay = (short) (dayHours * minutesInHour * 3);
+        int minutesInMonth = minutesInDay * 30;
+
+        short producedForTwentyMinutes = (short) (productivityPerMinute * twentyMinutes);
+        short producedForOneDay = (short) (productivityPerMinute * minutesInDay);
+        int producedForThreeDay = productivityPerMinute * minutesInThreeDay;
+        int producedForMonth = productivityPerMinute * minutesInMonth;
+
+        System.out.println("За 20 минут машина произвела " + producedForTwentyMinutes + " штук бутылок");
+        System.out.println("За сутки машина произвела " + producedForOneDay + " штук бутылок");
+        System.out.println("За 3 дня машина произвела " + producedForThreeDay + " штук бутылок");
+        System.out.println("За 1 месяц машина произвела " + producedForMonth + " штук бутылок");
     }
 }
